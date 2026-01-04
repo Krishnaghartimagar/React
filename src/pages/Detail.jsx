@@ -16,7 +16,5 @@ function Detail(){
         </div>
 
     )
-    
-
 }
 export default Detail

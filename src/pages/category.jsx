@@ -7,8 +7,8 @@ function Category() {
 
   useEffect(() => {
     fetch(`https://dummyjson.com/products/category/${categoryId}`)
-      .then(res => res.json())
-      .then(result => setData(result.products))
+      .then(a => a.json())
+      .then(b=> setData(b.products))
   }, [categoryId])
 
   return (
