@@ -1,33 +1,31 @@
-
-import Home from "./pages/Home"
+import Header from "./comp/Header"
 import Footer from "./comp/Footer"
-import Header from "./comp/header"
-import A from "./pages/A"
+import { Route, Routes } from "react-router-dom"
+import Home from "./pages/Home"
 import Category from "./pages/category"
+ 
+ 
+import FormA from "./FormA"
 import Detail from "./pages/Detail"
-import { BrowserRouter } from "react-router-dom";
-import { Routes, Route } from "react-router-dom";
-import C from "./pages/c"
+import Cart from "./pages/Cart"
 
 
-
-
-function App() {
+function App()
+{
   return (
-  
-    <BrowserRouter>
-      <Header />
-      <Routes>
-        <E/>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<A />} />
-        <Route path="/category/:categoryId" element={<Category />} />
-        <Route path="/detail/:id" element={<Detail />} />
-      </Routes>
+    <>
+    <FormA />
+   
+    <Header/>
+    <Routes>
+      <Route path="/" element={<Home/>}/>
+      <Route path="/category/:categorId" element={<Category/>}/>
+      <Route path="/details/:id" element={<Detail/>}/>
+      <Route path="/Cart/" element={<Cart />}/>
 
-      <Footer />
-    </BrowserRouter>
+    </Routes>
+    <Footer/> 
+    </>
   )
 }
-
 export default App

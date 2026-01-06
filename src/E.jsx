@@ -21,6 +21,8 @@ export default function E() {
         <h2>{state.count}</h2>
         <button onClick={()=>dispatch({type:'inc'})}>++</button>
         <button onClick={()=>dispatch({type:'dis'})}>--</button>
+
+        
       
     </div>
   )
